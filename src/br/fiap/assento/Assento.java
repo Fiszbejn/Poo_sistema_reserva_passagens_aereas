@@ -9,6 +9,10 @@ public class Assento {
         this.disponivel = true;
     }
 
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
     public int getNumero() {
         return numero;
     }

@@ -15,9 +15,10 @@ public class PessoaJuridica extends Cliente implements Desconto {
     @Override
     public double aplicarDesconto(double valorOriginal) {
         Random random = new Random();
-        double valorComDesconto;
-        valorComDesconto = valorOriginal - (valorOriginal * (random.nextInt(1, 10)/100));
-        return valorComDesconto;
+        double valorDescontado;
+        double percentualDesconto = random.nextDouble(0.90, 0.99);
+        valorDescontado = valorOriginal * percentualDesconto;
+        return valorDescontado;
     }
 
     @Override
